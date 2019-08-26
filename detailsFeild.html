@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+    
+</head>
+<body>
+<div class="container">
+  <h3>Fill the details</h3>
+  <form action="#">
+    <div class="form-group">
+      <label>First Name:</label>
+        <input type="text" class="form-control" id="first">
+      <label>Middle Name:</label>
+        <input type="Name" class="form-control" id="middle">
+        <label>Last Name:</label>
+          <input type="ID" class="form-control" id="last">
+        <label>Email:</label>
+          <input type="ID" class="form-control" id="email" name="email">
+        <label>Mobile Number:</label>
+          <input type="ID" class="form-control" id="number">
+      <br>
+       <button type="button" class="btn btn-primary" id="saveData">Save</button>
+	<button type="button" class="btn btn-primary"  id="clearDetails" onclick="clearData()">Clear</button>
+      </div>
+    
+  </form>
+</div>
+<br>
+<div class="container">
+ <table class="table table-bordered table" id="tableData">
+    <thead class="thead-dark">
+	 <tr>
+	  
+	  <th>First Name</th>
+	  <th>Middle Name</th>
+	  <th>Last Name</th>
+      <th>Email</th>
+	  <th>Mobile Number</th>
+	  
+	  
+   </tr> 
+	</thead>
+	
+
+  </table>
+</div>  
+</body>
+
+    <script>
+	   function getValue(tfid) {
+           return document.getElementById(tfid).value;
+       }
+
+       function getTD(givenValue) {
+           let newTD = document.createElement("TD");
+           newTD.innerText = givenValue;
+           return newTD;
+       }
+
+       function getTR(){
+           return document.createElement("TR");
+       }
+
+       function updateDocument() {
+           let newTR = document.createElement("TR");
+           let first = getTD(getValue("first")); 
+           let middle = getTD(getValue("middle"))
+           let last = getTD(getValue("last"))
+           let email = getTD(getValue("email"))
+           let number = getTD(getValue("number"))
+           newTR.appendChild(first)
+           newTR.appendChild(middle)
+           newTR.appendChild(last)
+           newTR.appendChild(email)
+           newTR.appendChild(number)
+           document.getElementById("tableData").appendChild(newTR);           
+       }
+       function clearData(){
+           document.getElementById('first').value = '';
+           document.getElementById('middle').value = '';
+           document.getElementById('last').value = '';
+           document.getElementById('email').value = '';
+           document.getElementById('number').value = '';
+         
+           }
+
+       document.getElementById("saveData").addEventListener('click', updateDocument);
+       document.getElementById("clearDetails").addEventListener('click',clearData);
+
+	</script>
+</html>

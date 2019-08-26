@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Log IN</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <form action="">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+    </br><button type="submit" class="btn btn-success" onclick="validation()" ><a href="detailsFeild.html" style="color:white;text-decoration: none">LogIN</a></button>
+    <button type="submit" class="btn btn-info"  ><a href="testdetails.html" style="color:white;text-decoration: none" > Registration</a></button>
+    
+</div>
+      
+</form>
+</div>
+
+</body>
+</html>
+<script>
+function validation(){
+let a=document.getElementById('email').value;
+let b=document.getElementById('pwd').value;
+
+if(a==='' || a==='user'){
+alert('Please enter The Email')
+}
+else if(b===''|| b===12345){
+alert('Please enter the password')
+} 
+
+else if(passresult===''){
+alert("please enter valid Password")
+
+}
+else if(b.length<3){
+    alert('password will be more than 5 letters')
+
+
+}
+
+
+
+else{
+alert('success')
+
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+</script>

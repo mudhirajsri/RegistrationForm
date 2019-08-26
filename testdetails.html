@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Total details</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  
+  <form action="">
+    <div class="form-group">
+      <label for="first">FirstName</label>
+<input type="name" class="form-control" id="first" placeholder="Enter name" >
+      <label for="middle">Middle Name</label>
+      <input type="name" class="form-control" id="middle" placeholder="Enter name" >
+      <label for="last">LastName</label>
+      <input type="name" class="form-control" id="last" placeholder="Enter name" >
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter name email" >
+      <label for="number">MobileNumber</label>
+      <input type="number" class="form-control" id="number" placeholder="Enter name" >
+      <label for="Password">Password</label>
+      <input type="Password" class="form-control" id="Password" placeholder="Enter name" >
+      <label for="Confirm">Confirm Password</label>
+      <input type="Password" class="form-control" id="Confirm" placeholder="Enter name" >
+    </br><button type="submit" class="btn btn-success" id="addData">Submit</button>
+    <button type="submit" class="btn btn-info"  ><a href="test.html" > Registration</a></button>
+    </div>  
+</form>
+</div>
+
+
+<div class="container">
+    <table class="table table-bordered table" id="tableData">
+       <thead class="thead-dark">
+        <tr>
+         
+         <th>Name</th>
+         <th>Technology</th>
+         <th>Aptitude</id>
+         <th>Communication</th>
+      </tr> 
+       </thead>
+       
+   
+     </table>
+   
+<script>
+function sucessSubmit(){
+let a=document.getElementById('first').value;
+let b=document.getElementById('middle').value;
+let c=document.getElementById('last').value;
+let d=document.getElementById('email').value;
+let e=document.getElementById('number').value;
+let f=document.getElementById('Password').value;
+let g=document.getElementById('Confirm').value;
+ if(a===''){
+alert('enter the Firstname')
+
+ }
+else if(b===''){
+alert('enter the Middlename')
+
+ }
+  else if(c===''){
+alert('enter the Lastname')
+
+ }
+ else if(d===''){
+alert('enter the email')
+
+ }
+ else if(e===''){
+alert('enter the number')
+
+ }
+ else if(f===''){
+alert('enter the Password')
+
+ }
+ else if(g===''){
+alert('enter the Confirm')
+
+ }
+
+ else{
+alert('Success')
+
+ }
+
+
+
+}
+</script>
+</body>
+</html>
